@@ -404,7 +404,7 @@ h5 {
 
 .program .container hr {
 	margin: 25px 0 0 0;
-	border-bottom: .5px solid #ccdbe7;
+	border-bottom: 0.5px solid #ccdbe7;
 }
 
 .program .title h5 {
@@ -510,7 +510,7 @@ h5 {
 }
 
 .certificate .title hr {
-	border: .5px solid #ccdbe7;
+	border: 0.5px solid #ccdbe7;
 	margin-top: 20px;
 }
 
@@ -715,6 +715,8 @@ h5 {
 	border-radius: 15px;
 	border: solid 2px #d8d8d8;
 	-webkit-border: solid 2px #d8d8d8;
+	-webkit-appearance: none;
+    -webkit-border-radius: 15px;
 }
 
 input[type='search']::-webkit-search-decoration,
@@ -780,20 +782,17 @@ input[type='checkbox'] {
 	position: relative;
 	cursor: pointer;
 	margin-right: 32px;
-	margin-left: 3px;
+	margin-left: 3px;width: 30px;
 }
 
 input[type='checkbox']:before {
 	content: '';
 	display: flex;
-	position: absolute;
 	width: 40px;
 	height: 40px;
 	border-radius: 8px;
 	border: solid 2px #d8d8d8;
 	background-color: #fff;
-	top: -3px;
-	left: -3px;
 }
 
 input[type='checkbox']:hover:before {
@@ -838,6 +837,8 @@ input[type='checkbox']:checked:after {
 
 .register .form .submit {
 	text-align: center;
+	width: 100%;
+	margin-top: -3px;
 }
 
 .register .form .btn {
@@ -1297,8 +1298,7 @@ ul {
 @media (max-width: 605px) {
 	.header .content .row .left {
 		flex-basis: 100% !important;
-		height: 100%;
-		margin-bottom: 20 !important;
+		margin-bottom: 20px !important;
 	}
 
 	.header .content {
