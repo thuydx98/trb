@@ -805,15 +805,12 @@ input[type='checkbox'].error:before {
 
 input[type='checkbox']:checked:before {
 	content: '';
-	display: block;
-	position: absolute;
+	display: flex;
 	width: 40px;
 	height: 40px;
 	border-radius: 8px;
 	background-color: #004b87;
 	border: solid 2px #004b87;
-	top: -3px;
-	left: -3px;
 }
 
 input[type='checkbox']:checked:after {
@@ -827,8 +824,8 @@ input[type='checkbox']:checked:after {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 	position: absolute;
-	top: 8px;
-	left: 15px;
+    top: 11px;
+    left: 19px;
 }
 
 .register .form .checkbox .acceptant {
@@ -1406,6 +1403,10 @@ ul {
 @media (max-width: 553px) {
 	.register .box {
 		width: 100%;
+	}
+
+	.register .form .checkbox .acceptant {
+		margin-top: -5px;
 	}
 
 	.program .program-intro {

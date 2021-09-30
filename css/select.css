@@ -70,7 +70,7 @@
 	border: solid 2px #d8d8d8;
 	border-radius: 15px;
 	overflow: hidden;
-	z-index: 2;
+	z-index: 3;
 }
 
 /*hide the items when the select box is closed:*/
@@ -85,11 +85,18 @@
 }
 
 .custom-select .field-placeholder {
-	background-color: white;
 	width: fit-content;
 	width: fit-content;
 	cursor: pointer;
 	z-index: -1;
+	width: 80%;
+	background-color: transparent;
+}
+
+.custom-select .field-name {
+	background-color: white;
+	width: fit-content;
+	padding: 0 5px;
 }
 
 .custom-select .field-placeholder.special {
@@ -97,8 +104,8 @@
 }
 
 .custom-select.field-wrapper.hasValue .field-placeholder {
-	-webkit-transform: scale(0.75) translateY(-39px) translateX(0px);
-	transform: scale(0.75) translateY(-39px) translateX(0px);
+	-webkit-transform: scale(0.75) translateY(-39px) translateX(-40px);
+	transform: scale(0.75) translateY(-39px) translateX(-40px);
 	padding: 0px;
 	padding-left: 5px;
 	padding-right: 5px;
