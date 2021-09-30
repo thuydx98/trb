@@ -163,7 +163,7 @@ h5 {
 .header .logo {
 	display: flex;
 	align-items: center;
-	gap: 50px;
+	grid-gap: 50px;
 }
 
 .header .logo img {
