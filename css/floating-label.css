@@ -1,0 +1,69 @@
+@font-face {
+	font-family: 'SF Pro Display Medium';
+	src: url('../fonts/SF-Pro-Display-Medium.otf') format('opentype');
+}
+
+.field-wrapper {
+	position: relative;
+}
+
+.field-wrapper .field-placeholder {
+	font-size: 16px;
+	position: absolute;
+	bottom: 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	left: 8px;
+	padding: 0 17px;
+	-webkit-transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	z-index: 1;
+
+	text-align: left;
+	width: auto;
+	font-weight: 500;
+	color: #999;
+	background-color: white;
+}
+
+.field-wrapper .field-placeholder .field-name {
+	color: #999;
+}
+
+.field-wrapper .field-placeholder span {
+	background: #ffffff;
+	padding: 0px 8px;
+}
+
+.field-wrapper input:not([disabled]):focus ~ .field-placeholder {
+	font-family: 'SF Pro Display Medium';
+	font-size: 16px;
+}
+
+.field-wrapper input:not([disabled]):focus ~ .field-placeholder,
+.field-wrapper.hasValue input:not([disabled]) ~ .field-placeholder {
+	-webkit-transform: scale(0.75) translateY(-39px) translateX(-60px);
+	transform: scale(0.75) translateY(-39px) translateX(-60px);
+}
+
+.field-wrapper div:not([disabled]):focus ~ .field-placeholder {
+	font-family: 'SF Pro Display Medium';
+	font-size: 16px;
+}
+
+/* Animations */
+.fade-out.aos-animate {
+	opacity: 0;
+}
+
+/* Search input*/
+input[type='search']::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+	height: 26px;
+	width: 26px;
+	border-radius: 50em;
+	background: url(../images/icons/icons-close.svg) no-repeat;
+	background-size: contain;
+	opacity: 1;
+	cursor: pointer;
+}
