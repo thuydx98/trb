@@ -163,12 +163,12 @@ h5 {
 .header .logo {
 	display: flex;
 	align-items: center;
-	grid-gap: 50px;
 }
 
 .header .logo img {
 	width: auto;
 	height: 81px;
+	margin-right: 50px;
 }
 
 .header .title p:first-child {
@@ -1099,12 +1099,12 @@ ul {
 .menu .container .logo {
 	display: flex;
 	align-items: center;
-	grid-gap: 10px;
 }
 
 .menu .container .logo img {
 	width: 38.4px;
 	height: 38.4px;
+	margin-left: 10px;
 }
 
 .menu .container .left .content {
@@ -1237,6 +1237,11 @@ ul {
 		width: 47px;
 		height: 47px;
 	}
+
+	.header .logo img {
+		margin-right: 20px;
+	}
+
 	.header .title p:first-child {
 		font-size: 20px;
 	}
