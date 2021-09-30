@@ -205,7 +205,6 @@ h5 {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin: 20px auto;
-	gap: 20px;
 }
 
 .header .content .row .col-2 .content {
@@ -372,7 +371,6 @@ h5 {
 .advise .slide-action {
 	display: flex;
 	justify-content: center;
-	gap: 10px;
 	margin-top: 50px;
 }
 
@@ -406,7 +404,7 @@ h5 {
 
 .program .container hr {
 	margin: 25px 0 0 0;
-	border-bottom: 1px solid #fff;
+	border-bottom: .5px solid #ccdbe7;
 }
 
 .program .title h5 {
@@ -434,7 +432,6 @@ h5 {
 .program .program-slide .slide .time {
 	display: flex;
 	align-items: inherit;
-	gap: 5px;
 }
 
 .program .program-slide .slide .time img {
@@ -513,7 +510,7 @@ h5 {
 }
 
 .certificate .title hr {
-	border: 1px solid #fff;
+	border: .5px solid #ccdbe7;
 	margin-top: 20px;
 }
 
@@ -775,7 +772,6 @@ input[type='search']::-webkit-search-results-decoration {
 
 .register .form .checkbox {
 	display: flex;
-	gap: 15px;
 	align-items: flex-start;
 	margin-top: 32px;
 }
@@ -1074,14 +1070,9 @@ ul {
 	background-color: #4c81ab;
 	display: flex;
 	align-items: center;
-	gap: 30px;
 	height: 78px;
 	justify-content: space-between;
 	box-shadow: 0 22px 47px -10px rgba(36, 36, 38, 0.29);
-}
-
-.menu .container .left {
-	gap: 15px;
 }
 
 .menu .container .left .hr {
@@ -1307,8 +1298,13 @@ ul {
 	.header .content .row .left {
 		flex-basis: 100% !important;
 		height: 100%;
-		margin-bottom: 0 !important;
+		margin-bottom: 20 !important;
 	}
+
+	.header .content {
+		margin-bottom: 50px;
+	}
+
 	.header .content .row .right {
 		flex-basis: 100% !important;
 	}
@@ -1587,12 +1583,10 @@ ul {
 	#header {
 		background-size: 110% auto;
 	}
-	.header .logo {
-		gap: 17px;
-	}
 	.header .container .logo img {
 		width: 40px;
 		height: 40px;
+		margin-right: 17px;
 	}
 	.header .title p:first-child {
 		font-size: 15px;
@@ -1637,9 +1631,6 @@ ul {
 		font-size: 14px !important;
 	}
 
-	.row {
-		gap: 20px;
-	}
 	.certificate .row .left {
 		flex-basis: 100%;
 	}
@@ -1655,10 +1646,6 @@ ul {
 		/* width: 455px; */
 		border-radius: 0 0 0 26px;
 		padding: 15px 19px 21px 17px;
-	}
-
-	.menu .container {
-		gap: 10px;
 	}
 
 	#search-form {
