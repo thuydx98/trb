@@ -315,12 +315,12 @@ h5 {
 .advise .slide-action .oval.left:hover {
 	transform: rotate(180deg);
 	transition: none;
-	margin-left: 10px;
 }
 
 .advise .slide-action .oval.right {
 	transform: rotate(90deg);
 	transition: none;
+	margin-left: 10px;
 }
 
 .advise .slide-action .oval.right:hover {
