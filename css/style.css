@@ -1418,7 +1418,7 @@ ul {
 
 	.model .infor-bottom {
 		margin-top: 10px;
-		max-height: calc(100vh - 170px);
+		max-height: calc(100% - 160px);
 	}
 
 	.model {
