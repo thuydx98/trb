@@ -309,11 +309,13 @@ h5 {
 .advise .slide-action .oval.left {
 	transform: rotate(-90deg);
 	transition: none;
+	margin-right: 10px;
 }
 
 .advise .slide-action .oval.left:hover {
 	transform: rotate(180deg);
 	transition: none;
+	margin-left: 10px;
 }
 
 .advise .slide-action .oval.right {
@@ -919,6 +921,14 @@ input[type='checkbox']:checked:after {
 	color: #004b87;
 }
 
+.btn-close button {
+	font-family: 'SF Pro Display Semi Bold';
+    background: #004b87;
+    color: #fff;
+    padding: 5px 12px !important;
+    font-size: 14px;
+}
+
 .oval:hover {
 	border: #fff;
 	background: url('../images/gifts/icons-arrow-left.png'), #004b87;
@@ -1223,7 +1233,7 @@ ul {
 
 .model .btn-close {
 	position: absolute;
-	right: 18px;
+	right: 34px;
 	top: 6px;
 	font-size: 18px;
 }
