@@ -18,11 +18,6 @@
             src: url('https://thuydx98.github.io/trb/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
         }
 
-        @font-face {
-            font-family: "SF Pro Display Bold";
-            src: url('https://thuydx98.github.io/trb/fonts/SF-Pro-Display-Bold.otf') format('opentype');
-        }
-
         table,
         td,
         div,
@@ -30,25 +25,37 @@
         p,
         a {
             font-family: 'SF Pro Display Medium', Arial, sans-serif;
-            color: #ffffff;
+            color: #FFFFFF;
+        }
+
+        .container {
+            padding: 47px 71px 25px 71px;
+            background: url(https://thuydx98.github.io/trb/images/emails/background.jpg), #004b87;
+            background-size: 100% auto;
+            background-position: top, bottom;
+            background-repeat: no-repeat;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container {
+                background: url(./images/emails/mobile/background.png), #004b87;
+                background-size: 100% auto;
+                background-position: top, bottom;
+                background-repeat: no-repeat;
+            }
         }
     </style>
 </head>
 
 <body style="margin:0;padding:0;">
     <table role="presentation"
-        style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
+        style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#FFFFFF;">
         <tr>
-            <td align="center" style="padding:0;">
+            <td align="center" style="padding:0;display:flex;">
                 <table role="presentation"
-                    style="width:960px;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;background:#004b87;">
+                    style="width:960px;margin: 0 auto;border-collapse:collapse;border:1px solid #cccccc;border-spacing:0;text-align:left;background:#004b87;">
                     <tr>
-                        <td style="
-                            padding: 47px 71px 25px 71px;
-                            background: url(https://thuydx98.github.io/trb/images/emails/background.jpg), #004b87;
-                            background-size: 100% auto;
-                            background-position: top, bottom;
-                            background-repeat: no-repeat;">
+                        <td class="container">
                             <img src="https://thuydx98.github.io/trb/images/menu/logo-1.png" width="48"
                                 style="padding-right: 16px;" />
                             <img src="https://thuydx98.github.io/trb/images/menu/logo-3.png" width="48"
@@ -57,7 +64,7 @@
                                 style="height:48px;" />
 
                             <p
-                                style="margin:18px 0 29px 0; font-family: 'SF Pro Display Bold'; font-size:18px;font-weight:500;color:#99b7cf;">
+                                style="margin:18px 0 29px 0; font-family: 'SF Pro Display Semi Bold'; font-size:18px;font-weight:500;color:#99b7cf;">
                                 Kính mời Quý Bác sĩ, Dược sĩ và Nhân viên y tế tham dự:
                             </p>
 
@@ -85,7 +92,7 @@
                                             <img src="https://thuydx98.github.io/trb/images/lists/icons-time.png"
                                                 width="58">
                                             <p
-                                                style="margin: 5px 0 0 6px; font-size: 18px; font-family: 'SF Pro Display Bold'; font-weight: bold; line-height: 1.33;">
+                                                style="margin: 5px 0 0 6px; font-size: 18px; font-family: 'SF Pro Display Semi Bold'; font-weight: bold; line-height: 1.33;">
                                                 14:00 - 16:00,<br>
                                                 Thứ bảy 23 / 10 / 2021
                                             </p>
@@ -105,7 +112,7 @@
                                 <a href="#" target="_blank" style="
                                 padding: 14px 20px 16px 24px;
                                 border-radius: 36px;
-                                background-color: #fff;
+                                background-color: #FFFFFF;
                                 font-size: 16px;
                                 font-weight: 600;
                                 color: #333;
@@ -113,7 +120,7 @@
                                 text-decoration: none;">
                                     Đăng ký miễn phí tại đây
                                     <img src="https://thuydx98.github.io/trb/images/emails/icons-share.png" width="20"
-                                        style="margin-left: 12px; margin-bottom: -4px;" />
+                                        style="margin-left: 12px; vertical-align: text-top;" />
                                 </a>
                             </p>
 
@@ -134,7 +141,7 @@
                                             style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                             <tr>
                                                 <td style="width:397px;padding:20px;vertical-align:top;
-                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #fff;
+                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #FFFFFF;
                                                     background-size: 56% auto;
                                                     background-position: bottom left;
                                                     background-repeat: no-repeat, no-repeat;">
@@ -151,13 +158,13 @@
                                                         Phó Giám Đốc, Bệnh Viện Mắt Trung Ương
                                                     </p>
                                                     <p style="margin:25px 0 0 0;">
-                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-1.webp"
+                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-1.png"
                                                             alt="" width="120" style="height:auto;display:block;" />
                                                     </p>
                                                 </td>
                                                 <td style="width:25px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
                                                 <td style="width:397px;padding:20px;vertical-align:top;
-                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #fff;
+                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #FFFFFF;
                                                     background-size: 56% auto;
                                                     background-position: bottom left;
                                                     background-repeat: no-repeat, no-repeat;">
@@ -174,7 +181,7 @@
                                                         Giám Đốc Trung Tâm Mắt, Bệnh Viện Trung Ương Huế
                                                     </p>
                                                     <p style="margin:25px 0 0 0;">
-                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-2.webp"
+                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-2.png"
                                                             alt="" width="120" style="height:auto;display:block;" />
                                                     </p>
                                                 </td>
@@ -189,7 +196,7 @@
                                             <tr>
                                                 <td style="
                                                     width:397px; padding:20px; vertical-align:top;
-                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #fff;
+                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #FFFFFF;
                                                     background-size: 80% auto;
                                                     background-position: bottom left;
                                                     background-repeat: no-repeat, no-repeat;">
@@ -208,14 +215,14 @@
                                                         Bệnh Viện Mắt Trung Ương
                                                     </p>
                                                     <p style="margin:10px 0 0 0;">
-                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-3.webp"
+                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-3.png"
                                                             alt="" width="120" style="height:auto;display:block;" />
                                                     </p>
                                                 </td>
                                                 <td style="width:60px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
                                                 <td style="
                                                     width:397px; padding:20px; vertical-align:top;
-                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #fff;
+                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #FFFFFF;
                                                     background-size: 80% auto;
                                                     background-position: bottom left;
                                                     background-repeat: no-repeat, no-repeat;">
@@ -234,14 +241,14 @@
                                                         Bệnh Viện Mắt Hồ Chí Minh
                                                     </p>
                                                     <p style="margin:10px 0 0 0;">
-                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-4.webp"
+                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-4.png"
                                                             alt="" width="120" style="height:auto;display:block;" />
                                                     </p>
                                                 </td>
                                                 <td style="width:60px;padding:0;font-size:0;line-height:0;">&nbsp;</td>
                                                 <td style="
                                                     width:397px; padding:20px; vertical-align:top;
-                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #fff;
+                                                    background: url(https://thuydx98.github.io/trb/images/gifts/group-464.png), #FFFFFF;
                                                     background-size: 80% auto;
                                                     background-position: bottom left;
                                                     background-repeat: no-repeat, no-repeat;">
@@ -260,7 +267,7 @@
                                                         Trung Tâm Mắt- Bệnh Viện Trung Ương Huế
                                                     </p>
                                                     <p style="margin:10px 0 0 0;">
-                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-5.webp"
+                                                        <img src="https://thuydx98.github.io/trb/images/about-us/us-5.png"
                                                             alt="" width="120" style="height:auto;display:block;" />
                                                     </p>
                                                 </td>
@@ -324,7 +331,7 @@
                                         <p style="margin:28px 0;font-size: 18px;font-weight: 500;color: #99b7cf;">
                                             Tìm hiểu thêm thông tin chương trình tại:
                                         </p>
-                                        <p style="font-size: 18px;font-weight: 500;color: #fff;">
+                                        <p style="font-size: 18px;font-weight: 500;color: #FFFFFF;">
                                             <a href="#" target="_blank"
                                                 style="font-family: 'SF Pro Display Semi Bold'; text-decoration:none;">
                                                 <span style="text-decoration:underline;">Landing Page</span>
@@ -353,14 +360,14 @@
                                 <tr>
                                     <td style="padding:0;width:50%;" align="left">
                                         <p
-                                            style="margin:0;font-size: 18px;line-height:1.22;font-family:'SF Pro Display Medium',Arial,sans-serif;color:#ffffff;">
+                                            style="margin:0;font-size: 18px;line-height:1.22;font-family:'SF Pro Display Medium',Arial,sans-serif;color:#FFFFFF;">
                                             Thân mến,<br />
                                             <span style="font-weight: bold;">Ban tổ chức.</span>
                                         </p>
                                     </td>
                                     <td style="padding:0;width:50%;" align="right">
                                         <a href="#" target="_blank"
-                                            style="color:#ffffff;text-decoration:underline;font-size: 18px;font-weight: 600;line-height: 2.06;font-family: 'SF Pro Display Semi Bold';">
+                                            style="color:#FFFFFF;text-decoration:underline;font-size: 18px;font-weight: 600;line-height: 2.06;font-family: 'SF Pro Display Semi Bold';">
                                             Unsubscribe
                                         </a>
                                     </td>
