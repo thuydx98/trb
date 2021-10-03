@@ -28,6 +28,11 @@
             color: #FFFFFF;
         }
 
+        .adviser-title a {
+            color: #004b87 !important;
+            text-decoration: none;
+        }
+
         .root {
             width: 960px;
             margin: 0 auto;
@@ -44,7 +49,9 @@
 
         .home-container {
             padding: 47px 71px 25px 71px;
-            background: url(https://thuydx98.github.io/trb/images/emails/background.jpg), #004b87;
+            background:
+                url(https://thuydx98.github.io/trb/images/emails/background.jpg),
+                #004b87;
             background-size: 100% auto;
             background-position: top, bottom;
             background-repeat: no-repeat;
@@ -71,7 +78,7 @@
         .home-container .title {
             font-family: 'SF Pro Display Semi Bold', Helvetica;
             margin: 12px 0 13px 0;
-            font-size: 30px;
+            font-size: 30px !important;
             font-weight: 600;
         }
 
@@ -80,6 +87,14 @@
             margin: 13px 0 29px 0;
             font-size: 30px;
             font-weight: 600;
+        }
+
+        .home-container .time-container {
+            width: 70%;
+            border-collapse: collapse;
+            border: 0;
+            border-spacing: 0;
+            font-size: 9px;
         }
 
         .home-container .register-btn {
@@ -162,8 +177,9 @@
             }
 
             .home-container {
-                padding: 41px 40px 24px 30px;
-                background: url(https://thuydx98.github.io/trb/images/emails/mobile/background.png), #004b87;
+                padding: 41px 30px 24px 30px;
+                background: url(https://thuydx98.github.io/trb/images/emails/mobile/background.png),
+                    url(https://thuydx98.github.io/trb/images/background/program_1.png) #004b87;
                 background-size: 100% auto;
                 background-position: top, bottom;
                 background-repeat: no-repeat;
@@ -187,15 +203,23 @@
             }
 
             .home-container .title {
-                font-size: 26px;
+                font-size: 20px;
             }
 
             .home-container .sub-title-3 {
                 font-size: 22px;
             }
 
+            .home-container .time-container {
+                width: 100%;
+            }
+
+            .home-container .register-btn-container {
+                text-align: center;
+            }
+
             .home-container .register-btn {
-                padding: 14px 55px 16px 55px;
+                padding: 14px 45px 16px 55px;
                 font-size: 18px;
             }
 
@@ -204,11 +228,12 @@
             }
 
             .mobile-container {
-                display: block;
+                display: unset;
+                width: 100%;
             }
 
             .mobile-adviser-container {
-                padding: 0 40px 40px 30px;
+                padding: 0 30px 40px 30px;
                 background: url(https://thuydx98.github.io/trb/images/background/program_1.png), url(https://thuydx98.github.io/trb/images/background/program-repeat.png), #004b87;
                 background-size: 100% auto;
                 background-position: top, bottom;
@@ -228,7 +253,7 @@
             }
 
             .invitation-container {
-                padding: 0 40px 15px 30px;
+                padding: 0 30px 15px 30px;
             }
 
             .invitation-container .qr-code {
@@ -247,11 +272,11 @@
 
             .invitation-container .dot,
             .invitation-container .link .dot {
-                padding-right: 15px;
+                padding-right: 10px;
             }
 
             .footer-container {
-                padding: 21px 45px 21px 30px;
+                padding: 21px 30px 21px 30px;
                 background: #4c81ab;
             }
         }
@@ -280,8 +305,7 @@
 
                             <p class="sub-title-3"> Từ ghi nhận đến chiến lược quản lý </p>
 
-                            <table role="presentation"
-                                style="width:70%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;">
+                            <table role="presentation" class="time-container">
                                 <tr class="desktop-container">
                                     <td style="padding:0; width:50%;">
                                         <p style="margin: 0 0 8px; font-size: 18px; font-weight: 500; color: #99b7cf;">
@@ -332,7 +356,7 @@
                                 </tr>
                             </table>
 
-                            <p style="margin: 53px 0 54px 0;">
+                            <p class="register-btn-container" style="margin: 53px 0 54px 0;">
                                 <a href="#" target="_blank" class="register-btn">
                                     Đăng ký miễn phí tại đây
                                     <img src="https://thuydx98.github.io/trb/images/emails/icons-share.png" width="20"
@@ -366,8 +390,8 @@
                                                         style="margin: 0;font-size: 14px;font-weight: 500;color: #4c81ab;line-height: 1.43;">
                                                         Chủ tọa điều hành
                                                     </p>
-                                                    <p
-                                                        style="margin: 6px 0 7px;font-size: 20px;font-weight: 500;color: #004b87;">
+                                                    <p class="adviser-title"
+                                                        style="margin: 6px 0 7px;font-size: 20px;font-weight: 500;color: #004b87 !important;text-decoration:none;">
                                                         PGS.TS.BS Phạm Ngọc Đông
                                                     </p>
                                                     <p
@@ -421,8 +445,8 @@
                                                         style="margin: 0;font-size: 14px;font-weight: 500;color: #4c81ab;line-height: 1.43;">
                                                         Báo cáo viên
                                                     </p>
-                                                    <p
-                                                        style="margin: 6px 0 7px;font-size: 20px;font-weight: 500;color: #004b87;">
+                                                    <p class="adviser-title"
+                                                        style="margin: 6px 0 7px;font-size: 20px;font-weight: 500;color: #004b87 !important;text-decoration:none;">
                                                         PGS.TS.BS <br>
                                                         Lê Xuân Cung
                                                     </p>
@@ -509,7 +533,8 @@
                                             style="margin: 0;font-size: 16px;font-weight: 500;color: #4c81ab;line-height: 1.43;">
                                             Chủ tọa điều hành
                                         </p>
-                                        <p style="margin: 6px 0 7px;font-size: 22px;font-weight: 500;color: #004b87;">
+                                        <p class="adviser-title"
+                                            style="margin: 6px 0 7px;font-size: 22px;font-weight: 500;color: #004b87 !important;text-decoration:none;">
                                             PGS.TS.BS Phạm Ngọc Đông
                                         </p>
                                         <p
@@ -564,7 +589,8 @@
                                             style="margin: 0;font-size: 16px;font-weight: 500;color: #4c81ab;line-height: 1.43;">
                                             Báo cáo viên
                                         </p>
-                                        <p style="margin: 6px 0 7px;font-size: 22px;font-weight: 500;color: #004b87;">
+                                        <p class="adviser-title"
+                                            style="margin: 6px 0 7px;font-size: 22px;font-weight: 500;color: #004b87 !important;text-decoration:none;">
                                             PGS.TS.BS <br>
                                             Lê Xuân Cung
                                         </p>
