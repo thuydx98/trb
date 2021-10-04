@@ -18,6 +18,11 @@
             src: url('https://thuydx98.github.io/trb/fonts/SF-Pro-Display-Semibold.otf') format('opentype');
         }
 
+        @font-face {
+            font-family: 'SF Pro Display Regular';
+            src: url('https://thuydx98.github.io/trb/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+        }
+
         table,
         td,
         div,
@@ -140,8 +145,16 @@
             padding-top: 6.8px;
         }
 
+        .invite-title {
+            margin: 0 189px 25px 73px;
+            font-size: 24px;
+            line-height: 1.25;
+            font-family: 'SF Pro Display Semi Bold', Helvetica;
+            font-weight: 600;
+        }
+
         .invitation-container {
-            padding: 0 73px 54px 73px;
+            padding: 5px 73px 6px 73px;
         }
 
         .invitation-container .qr-code {
@@ -153,17 +166,22 @@
             display: none;
         }
 
-        .invitation-container .link {
-            padding: 0 5px;
-        }
-
-        .invitation-container .link .dot {
-            padding-right: 5px;
-        }
-
         .footer-container {
             padding: 21px 73px;
             background: #4c81ab;
+        }
+
+        .copyright-container td {
+            padding: 0;
+            text-align: center;
+        }
+
+        .copyright-container td p {
+            margin: 35px auto 35px auto;
+            font-size: 14px;
+            line-height: 1.93;
+            font-family: 'SF Pro Display Regular', Helvetica;
+            color: #99b7cf;
         }
 
         @media only screen and (max-width: 420px) {
@@ -252,6 +270,11 @@
                 margin: 25px 0 35px 0;
             }
 
+            .invite-title {
+                margin: 0 30px 25px 30px;
+                font-size: 24px;
+            }
+
             .invitation-container {
                 padding: 0 30px 15px 30px;
             }
@@ -261,23 +284,25 @@
             }
 
             .invitation-container .mobile {
-                display: initial;
-            }
-
-            .invitation-container .link {
                 display: block;
-                padding: 25px 0 0 0;
-                font-size: 20px;
-            }
-
-            .invitation-container .dot,
-            .invitation-container .link .dot {
-                padding-right: 10px;
             }
 
             .footer-container {
-                padding: 21px 30px 21px 30px;
+                padding: 65px 30px 21px 30px;
                 background: #4c81ab;
+            }
+
+            .copyright-container td {
+                padding: 0;
+                text-align: left;
+            }
+
+            .copyright-container td p {
+                margin: 30px 30px 32px 30px;
+                font-size: 14px;
+                line-height: 1.5;
+                font-family: 'SF Pro Display Regular', Helvetica;
+                color: #99b7cf;
             }
         }
     </style>
@@ -311,9 +336,9 @@
                                         <p style="margin: 0 0 8px; font-size: 18px; font-weight: 500; color: #99b7cf;">
                                             Thời gian
                                         </p>
-                                        <span style="display: flex">
+                                        <span style="display: flex;">
                                             <img src="https://thuydx98.github.io/trb/images/lists/icons-time.png"
-                                                width="58">
+                                                height="58">
                                             <p
                                                 style="margin: 5px 0 0 6px; font-size: 18px; font-family: 'SF Pro Display Semi Bold', Helvetica; font-weight: bold; line-height: 1.33;">
                                                 14:00 - 16:00,<br>
@@ -336,7 +361,7 @@
                                         </p>
                                         <span style="display: flex">
                                             <img src="https://thuydx98.github.io/trb/images/lists/icons-time.png"
-                                                width="58">
+                                                height="58">
                                             <p
                                                 style="margin: 5px 0 0 6px; font-size: 18px; font-family: 'SF Pro Display Semi Bold', Helvetica; font-weight: bold; line-height: 1.33;">
                                                 14:00 - 16:00,<br>
@@ -703,56 +728,60 @@
                             </table>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td>
+                            <p class="invite-title">
+                                Kính mời các Bác sĩ, Dược sĩ, Nhân viên Y tế tham gia đăng ký ngay để không
+                                bỏ lỡ!
+                            </p>
+                        </td>
+                    </tr>
+
                     <tr>
                         <td class="invitation-container">
                             <table role="presentation"
                                 style="width:100%;border-collapse:collapse;border:0;border-spacing:0;font-size:9px;">
                                 <tr>
                                     <td style="padding:0;width:auto;" align="left">
-                                        <p class="title"
-                                            style="margin:10px 0 0 0;line-height: 1.2;font-family: 'SF Pro Display Semi Bold', Helvetica;font-weight: 600;">
-                                            Kính mời các Bác sĩ, Dược sĩ, Nhân viên Y tế tham gia đăng ký ngay để không
-                                            bỏ lỡ!
+                                        <p style="margin:0 0 15px 0;font-size: 18px;font-weight: 500;color: #99b7cf;">
+                                            Đăng ký tham gia và tìm hiểu thêm về chương trình tại:
                                         </p>
-                                        <p style="margin:28px 0;font-size: 18px;font-weight: 500;color: #99b7cf;">
-                                            Tìm hiểu thêm thông tin chương trình tại:
+                                        <p style="font-size: 18px;font-weight: 600;">
+                                            •
+                                            <a href="#" target="_blank"
+                                                style="color:#fff;font-family: 'SF Pro Display Semi Bold', Helvetica; text-decoration:underline;margin-left: 10px;">
+                                                Website TRB Chemedica VN
+                                            </a>
                                         </p>
-                                        <p style="font-size: 18px;font-weight: 500;color: #FFFFFF;">
-                                            <span style="display: initial;" class="link">
-                                                <span class="dot mobile">•</span>
-                                                <a href="#" target="_blank"
-                                                    style="font-family: 'SF Pro Display Semi Bold', Helvetica; text-decoration:none;">
-                                                    <span style="color:#fff;text-decoration:underline;">
-                                                        Landing Page
-                                                    </span>
-                                                </a>
-                                            </span>
-                                            <span class="link">
-                                                <span class="dot">•</span>
-                                                <a href="#" target="_blank"
-                                                    style="font-family: 'SF Pro Display Semi Bold', Helvetica; text-decoration:none;">
-                                                    <span style="color:#fff;text-decoration:underline;">
-                                                        Fanpage bệnh viện
-                                                    </span>
-                                                </a>
-                                            </span>
-                                            <span class="link">
-                                                <span class="dot">•</span>
-                                                <span>Quét Mã QR chương trình hội thảo</span>
-                                            </span>
+                                        <p style="font-size: 18px;font-weight: 600;">
+                                            •
+                                            <a href="#" target="_blank"
+                                                style="font-family: 'SF Pro Display Semi Bold', Helvetica; text-decoration:underline;color:#fff;margin-left: 10px;">
+                                                Fanpage BV Trung Ương Huế
+                                            </a>
                                         </p>
 
-                                        <img class="mobile" style="margin: 16px 0 20px 0; width: 240px;"
-                                            src="https://thuydx98.github.io/trb/images/emails/qr-code.webp" width="240">
+                                        <p class="mobile"
+                                            style="margin:25px auto 19px auto;font-size: 18px;font-weight: 500;color: #99b7cf;height: 200px;">
+                                            Hoặc quét mã QR bên dưới:<br>
+                                            <img src="https://thuydx98.github.io/trb/images/emails/qr-code.webp"
+                                                style="width: 235px; margin-top: 19px;" width="235">
+                                        </p>
                                     </td>
-                                    <td class="qr-code" align="right">
-                                        <img src="https://thuydx98.github.io/trb/images/emails/qr-code.webp"
-                                            style="width: 181px" width="181">
+                                    <td class="qr-code" align="center" style="height: 75px;">
+                                        <p
+                                            style="margin:0 auto 19px auto;font-size: 18px;font-weight: 500;color: #99b7cf;height: 116px;">
+                                            Hoặc quét mã QR bên dưới:<br>
+                                            <img src="https://thuydx98.github.io/trb/images/emails/qr-code.webp"
+                                                style="width: 181px; margin-top: 19px;" width="181">
+                                        </p>
                                     </td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+
                     <tr>
                         <td class="footer-container">
                             <table role="presentation"
@@ -765,14 +794,21 @@
                                             <span style="font-weight: bold;">Ban tổ chức.</span>
                                         </p>
                                     </td>
-                                    <td style="padding:0;width:50%;text-align:right;" align="right">
-                                        <a href="#" target="_blank"
-                                            style="color:#FFFFFF;text-decoration:underline;text-align:right;font-size: 18px;font-weight: 600;line-height: 2.06;font-family: 'SF Pro Display Semi Bold', Helvetica;">
-                                            Unsubscribe
-                                        </a>
-                                    </td>
                                 </tr>
                             </table>
+                        </td>
+                    </tr>
+
+                    <tr class="copyright-container">
+                        <td>
+                            <p>
+                                Copyright ©2021 TRB Chemedica VN<br>
+                                Để ngưng không nhận email thông báo từ TRB Mechemica, vui lòng
+                                <a href="#" target="_blank"
+                                    style="color: #fff;text-decoration:underline;font-family: 'SF Pro Display Regular', Helvetica;">
+                                    click vào đây (unsubscribe)
+                                </a>
+                            </p>
                         </td>
                     </tr>
                 </table>
