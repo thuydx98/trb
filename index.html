@@ -594,7 +594,6 @@
     <!-- register -->
     <section class="register" id="register">
         <div class="container">
-
             <div class="title">
                 <h5>
                     Đăng ký tham gia ngay
@@ -605,73 +604,115 @@
                 </p>
             </div>
             <div class="box">
-                <form action="#" class="form" data-aos="fade-up" data-aos-duration="1000">
+                <form id="register-form" action="#" class="form" data-aos="fade-up" data-aos-duration="1000">
                     <div class="input field-wrapper">
-                        <input type="search">
+                        <input type="search" name="last_name" maxlength="64">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
                         <div class="field-placeholder">
-                            <p class="field-name">Họ tên*</p>
+                            <p class="field-name">Họ*</p>
                         </div>
+                        <span class="error-message">Vui lòng nhập họ</span>
                     </div>
                     <div class="input field-wrapper">
-                        <input type="search" class="error">
-                        <img class="icon show" src="./images/icons/icons-warning.svg">
+                        <input type="search" name="first_name" maxlength="64">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Tên*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập tên</span>
+                    </div>
+                    <div class="input field-wrapper">
+                        <input type="search" name="email" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
                         <div class="field-placeholder">
                             <p class="field-name">Email*</p>
                         </div>
-                        <span class="error-message show">Error message</span>
-                    </div>
-                    <div class="input field-wrapper">
-                        <input type="search">
-                        <div class="field-placeholder">
-                            <p class="field-name">Nơi công tác hiện tại*</p>
-                        </div>
+                        <span class="error-message">Vui lòng nhập email</span>
                     </div>
                     <div class="custom-select field-wrapper">
-                        <div class="field-placeholder">
-                            <p class="field-name">Tỉnh / thành phố</p>
+                        <div class="field-placeholder" style="padding-left: 0;">
+                            <p class="field-name" style="padding-left: 0;">Giới tính</p>
                         </div>
-                        <select>
-                            <option value="0">Tỉnh / thành phố</option>
-                            <option value="1">TP Hồ Chí Minh</option>
-                            <option value="2">Hà Nội</option>
-                            <option value="3">Điện Biên</option>
-                            <option value="4">Sơn La</option>
+                        <select name="gender">
+                            <option value="">Giới tính*</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
                         </select>
                     </div>
+                    <span class="error-message error-gender">Vui lòng chọn giới tính</span>
+
                     <div class="input field-wrapper">
-                        <input type="search">
+                        <input type="search" name="birthday" maxlength="10">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
                         <div class="field-placeholder">
-                            <p class="field-name">Điện thoại</p>
+                            <p class="field-name">Ngày sinh (dd/mm/yyyy)*</p>
                         </div>
+                        <span class="error-message">Vui lòng nhập ngày sinh</span>
                     </div>
-                    <div class="custom-select field-wrapper">
-                        <div class="field-placeholder special">
-                            <p class="field-name">Vui lòng xác nhận anh/chị là</p>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="birth_place" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Nơi sinh*</p>
                         </div>
-                        <select>
-                            <option value="0">Vui lòng xác nhận anh/chị là</option>
-                            <option value="1">Bác sĩ</option>
-                            <option value="2">Dược sĩ</option>
-                            <option value="3">Nhân viên y tế</option>
-                            <option value="4">Khác</option>
-                        </select>
+                        <span class="error-message">Vui lòng nhập nơi sinh</span>
+                    </div>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="phone" maxlength="12">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Số điện thoại*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập số điện thoại</span>
+                    </div>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="address" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Địa chỉ liên hệ*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập địa chỉ liên hệ</span>
+                    </div>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="company" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Đơn vị công tác*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập đơn vị công tác</span>
+                    </div>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="department" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Chuyên khoa công tác*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập chuyên khoa công tác</span>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox">
+                        <input type="checkbox" name="is_accept">
                         <label class="acceptant">
                             Tôi đồng ý xác nhận TRB Chemedica có thể sử dụng email cung cấp ở trên cho việc
                             liên hệ phản hồi thông tin về hội thảo.
                         </label>
                     </div>
+
+                    <div class="ajax-error" style="color: #d70015;text-align: center;margin-top: 20px;display: none;">
+                    </div>
+
                     <div class="submit">
-                        <button type="button" value="Đăng ký" class="btn">Đăng ký</button>
+                        <button type="submit" value="Đăng ký" class="btn">Đăng ký</button>
                     </div>
                 </form>
 
                 <div class="page-oval">
                     <div class="text">Quay về đầu trang</div>
                     <div class="oval" onclick="onOval()">
-                        <!-- <img src="./images/gifts/icons-arrow-left.svg"> -->
                     </div>
                 </div>
 
@@ -919,6 +960,29 @@
                 </span>
             </div>
 
+        </div>
+    </form>
+
+    <!-- register success modal -->
+    <form action="" id="search-form" class="model_6">
+        <div class="model-success">
+            <div style="margin: 53px auto 51px auto;">
+                <div class="icon">
+                    <img src="./images/icons/icons-check.png">
+                </div>
+                <div class="title">
+                    Đã đăng ký thành công!
+                </div>
+                <div class="message">
+                    Chúc mừng bạn đã đăng ký tham gia chương trình thành công. Vui lòng kiểm tra email của bạn để xác
+                    nhận
+                    thông tin đăng nhập.
+                </div>
+
+                <div style="text-align: center;width: 100%;margin-bottom: 0">
+                    <button type="button" onclick="location.reload()">Đóng</button>
+                </div>
+            </div>
         </div>
     </form>
     <!-- Swiper JS -->

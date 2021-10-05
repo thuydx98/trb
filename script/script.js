@@ -142,3 +142,210 @@ function onSwiperAdvise(direction) {
 		}
 	}, 300);
 }
+
+function isValidEmailAddress(emailAddress) {
+	var pattern =
+		/^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+	return pattern.test(emailAddress);
+}
+
+$('#register-form').submit(function (event) {
+	event.preventDefault();
+	let isError = false;
+	let $element = $('input[name=first_name]');
+	const first_name = $element.val().trim();
+	if (first_name === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=last_name]');
+	const last_name = $element.val().trim();
+	if (last_name === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=email]');
+	const email = $element.val().trim();
+	if (email === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+		$element.closest('.input').find('.error-message').text('Vui lòng nhập email');
+	} else if (!isValidEmailAddress(email)) {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+		$element.closest('.input').find('.error-message').text('Vui lòng nhập đúng định dạng email');
+	}
+
+	$element = $('select[name=gender]');
+	const gender = $element.val().trim();
+	if (gender === '') {
+		isError = true;
+		$element.closest('.custom-select').find('.select-selected').addClass('error');
+		$('.error-gender').css('display', 'block');
+	}
+
+	$element = $('input[name=birthday]');
+	const birthday = $element.val().trim();
+	if (birthday === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=birth_place]');
+	const birth_place = $element.val().trim();
+	if (birth_place === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=phone]');
+	const phone = $element.val().trim();
+	if (phone === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=address]');
+	const address = $element.val().trim();
+	if (address === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=company]');
+	const company = $element.val().trim();
+	if (company === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=department]');
+	const department = $element.val().trim();
+	if (department === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('input[name=is_accept]');
+	if ($('input[name=is_accept]').is(':checked') == false) {
+		isError = true;
+		$element.addClass('error');
+	}
+
+	if (isError) return;
+
+	$('button[type=submit]').html('<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>');
+
+	request = $.ajax({
+		url: 'https://id.azurewebsites.net/api/webinars/83310241529/registrants',
+		type: 'post',
+		headers: { 'Content-Type': 'application/json' },
+		data: JSON.stringify({
+			first_name,
+			last_name,
+			email,
+			custom_questions: [
+				{
+					title: 'Giới tính',
+					value: gender,
+				},
+				{
+					title: 'Ngày sinh (dd/mm/yyyy)',
+					value: birthday,
+				},
+				{
+					title: 'Nơi sinh',
+					value: birth_place,
+				},
+				{
+					title: 'Số điện thoại',
+					value: phone,
+				},
+				{
+					title: 'Địa chỉ liên hệ',
+					value: address,
+				},
+				{
+					title: 'Đơn vị công tác',
+					value: company,
+				},
+				{
+					title: 'Chuyên khoa công tác',
+					value: department,
+				},
+			],
+		}),
+	});
+
+	request.done(function () {
+		onInfor('.model_6');
+	});
+
+	request.error(function (jqXHR) {
+		$('button[type=submit]').text('Đăng ký');
+		if (jqXHR.status == 429) $('.ajax-error').text('Bạn đã đăng ký tham gia chương trình bằng email này.').show();
+		else $('.ajax-error').text('Lỗi hệ thống. Vui lòng thử lại sau.').show();
+	});
+});
+
+$('input').on('change keyup paste search', function () {
+	if ($(this).val().trim() === '') {
+		$(this).addClass('error');
+		$(this).closest('.input').find('.error-icon').show();
+		$(this).closest('.input').find('.error-message').css('display', 'block');
+	} else {
+		$(this).removeClass('error');
+		$(this).closest('.input').find('.error-icon').hide();
+		$(this).closest('.input').find('.error-message').css('display', 'none');
+	}
+});
+
+$('input[name=email]').on('change keyup paste search', function () {
+	$('.ajax-error').hide();
+	const email = $(this).val().trim();
+	if (email === '') {
+		isError = true;
+		$(this).addClass('error');
+		$(this).closest('.input').find('.error-icon').show();
+		$(this).closest('.input').find('.error-message').css('display', 'block');
+		$(this).closest('.input').find('.error-message').text('Vui lòng nhập email');
+	} else if (!isValidEmailAddress(email)) {
+		isError = true;
+		$(this).addClass('error');
+		$(this).closest('.input').find('.error-icon').show();
+		$(this).closest('.input').find('.error-message').css('display', 'block');
+		$(this).closest('.input').find('.error-message').text('Vui lòng nhập đúng định dạng email');
+	} else {
+		$(this).removeClass('error');
+		$(this).closest('.input').find('.error-icon').hide();
+		$(this).closest('.input').find('.error-message').css('display', 'none');
+	}
+});
+
+$('input[name=is_accept]').on('change keyup paste search', function () {
+	if ($(this).is(':checked') == false) {
+		$(this).addClass('error');
+	}
+});

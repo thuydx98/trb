@@ -25,6 +25,11 @@
 	z-index: 2;
 }
 
+
+.select-selected.error:after {
+	border-color: #d70015 transparent transparent transparent;
+}
+
 /*point the arrow upwards when the select box is open (active):*/
 .select-selected.select-arrow-active:after {
 	border-color: transparent transparent gray transparent;
@@ -46,6 +51,10 @@
 	width: 100%;
 	border-radius: 15px;
 	border: solid 2px #d8d8d8;
+}
+
+.select-selected.error {
+	border: solid 2px #d70015;
 }
 
 .select-items div {
