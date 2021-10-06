@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hội thảo trực tuyến - TÁC ĐỘNG CỦA ĐẠI DỊCH COVID-19 LÊN SỨC KHỎE MẮT</title>
-    <link rel="icon" href="./favicon.ico"/>
+
+    <link rel="icon" href="./favicon.ico" />
+
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/floating-label.css">
     <link rel="stylesheet" href="./css/select.css">
@@ -614,6 +617,7 @@
                         </div>
                         <span class="error-message">Vui lòng nhập họ</span>
                     </div>
+
                     <div class="input field-wrapper">
                         <input type="search" name="first_name" maxlength="64">
                         <img class="error-icon" src="./images/icons/icons-warning.svg">
@@ -622,6 +626,7 @@
                         </div>
                         <span class="error-message">Vui lòng nhập tên</span>
                     </div>
+
                     <div class="input field-wrapper">
                         <input type="search" name="email" maxlength="128">
                         <img class="error-icon" src="./images/icons/icons-warning.svg">
@@ -630,38 +635,32 @@
                         </div>
                         <span class="error-message">Vui lòng nhập email</span>
                     </div>
+
+                    <div class="input field-wrapper">
+                        <input type="search" name="company" maxlength="128">
+                        <img class="error-icon" src="./images/icons/icons-warning.svg">
+                        <div class="field-placeholder">
+                            <p class="field-name">Nơi công tác hiện tại*</p>
+                        </div>
+                        <span class="error-message">Vui lòng nhập nơi công tác hiện tại</span>
+                    </div>
+
                     <div class="custom-select field-wrapper">
                         <div class="field-placeholder" style="padding-left: 0;">
-                            <p class="field-name" style="padding-left: 0;">Giới tính</p>
+                            <p class="field-name" style="padding-left: 0;">Tỉnh / thành phố</p>
                         </div>
-                        <select name="gender">
-                            <option value="">Giới tính*</option>
-                            <option value="Nam">Nam</option>
-                            <option value="Nữ">Nữ</option>
+                        <select name="city">
+                            <option value="">Tỉnh / thành phố</option>
+                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Điện Biên">Điện Biên</option>
+                            <option value="Sơn La">Sơn La</option>
                         </select>
-                    </div>
-                    <span class="error-message error-gender">Vui lòng chọn giới tính</span>
-
-                    <div class="input field-wrapper">
-                        <input type="search" name="birthday" maxlength="10">
-                        <img class="error-icon" src="./images/icons/icons-warning.svg">
-                        <div class="field-placeholder">
-                            <p class="field-name">Ngày sinh (dd/mm/yyyy)*</p>
-                        </div>
-                        <span class="error-message">Vui lòng nhập ngày sinh</span>
+                        <span class="error-message error-select">Vui lòng chọn tỉnh / thành phố</span>
                     </div>
 
                     <div class="input field-wrapper">
-                        <input type="search" name="birth_place" maxlength="128">
-                        <img class="error-icon" src="./images/icons/icons-warning.svg">
-                        <div class="field-placeholder">
-                            <p class="field-name">Nơi sinh*</p>
-                        </div>
-                        <span class="error-message">Vui lòng nhập nơi sinh</span>
-                    </div>
-
-                    <div class="input field-wrapper">
-                        <input type="search" name="phone" maxlength="12">
+                        <input type="search" name="phone" maxlength="128">
                         <img class="error-icon" src="./images/icons/icons-warning.svg">
                         <div class="field-placeholder">
                             <p class="field-name">Số điện thoại*</p>
@@ -669,32 +668,20 @@
                         <span class="error-message">Vui lòng nhập số điện thoại</span>
                     </div>
 
-                    <div class="input field-wrapper">
-                        <input type="search" name="address" maxlength="128">
-                        <img class="error-icon" src="./images/icons/icons-warning.svg">
-                        <div class="field-placeholder">
-                            <p class="field-name">Địa chỉ liên hệ*</p>
+                    <div class="custom-select field-wrapper">
+                        <div class="field-placeholder special">
+                            <p class="field-name">Vui lòng xác nhận anh/chị là</p>
                         </div>
-                        <span class="error-message">Vui lòng nhập địa chỉ liên hệ</span>
+                        <select name="position">
+                            <option value="">Vui lòng xác nhận anh/chị là</option>
+                            <option value="Bác sĩ">Bác sĩ</option>
+                            <option value="Dược sĩ">Dược sĩ</option>
+                            <option value="Nhân viên y tế">Nhân viên y tế</option>
+                            <option value="Khác">Khác</option>
+                        </select>
+                        <span class="error-message error-select">Vui lòng chọn nghề nghiệp</span>
                     </div>
 
-                    <div class="input field-wrapper">
-                        <input type="search" name="company" maxlength="128">
-                        <img class="error-icon" src="./images/icons/icons-warning.svg">
-                        <div class="field-placeholder">
-                            <p class="field-name">Đơn vị công tác*</p>
-                        </div>
-                        <span class="error-message">Vui lòng nhập đơn vị công tác</span>
-                    </div>
-
-                    <div class="input field-wrapper">
-                        <input type="search" name="department" maxlength="128">
-                        <img class="error-icon" src="./images/icons/icons-warning.svg">
-                        <div class="field-placeholder">
-                            <p class="field-name">Chuyên khoa công tác*</p>
-                        </div>
-                        <span class="error-message">Vui lòng nhập chuyên khoa công tác</span>
-                    </div>
                     <div class="checkbox">
                         <input type="checkbox" name="is_accept">
                         <label class="acceptant">

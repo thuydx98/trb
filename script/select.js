@@ -20,8 +20,8 @@ for (i = 0; i < l; i++) {
 		c = document.createElement('DIV');
 		c.innerHTML = selElmnt.options[j].innerHTML;
 		c.addEventListener('click', function (e) {
-			$('select[name=gender]').closest('.custom-select').find('.select-selected').removeClass('error');
-			$('.error-gender').css('display', 'none');
+			$(this).closest('.custom-select').find('.select-selected').removeClass('error');
+			$(this).closest('.custom-select').find('.error-select').css('display', 'none');
 			/*when an item is clicked, update the original select box,
         and the selected item:*/
 			var y, i, k, s, h, sl, yl;

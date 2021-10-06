@@ -186,30 +186,21 @@ $('#register-form').submit(function (event) {
 		$element.closest('.input').find('.error-message').text('Vui lòng nhập đúng định dạng email');
 	}
 
-	$element = $('select[name=gender]');
-	const gender = $element.val().trim();
-	if (gender === '') {
+	$element = $('input[name=company]');
+	const company = $element.val().trim();
+	if (company === '') {
+		isError = true;
+		$element.addClass('error');
+		$element.closest('.input').find('.error-icon').show();
+		$element.closest('.input').find('.error-message').css('display', 'block');
+	}
+
+	$element = $('select[name=city]');
+	const city = $element.val().trim();
+	if (city === '') {
 		isError = true;
 		$element.closest('.custom-select').find('.select-selected').addClass('error');
-		$('.error-gender').css('display', 'block');
-	}
-
-	$element = $('input[name=birthday]');
-	const birthday = $element.val().trim();
-	if (birthday === '') {
-		isError = true;
-		$element.addClass('error');
-		$element.closest('.input').find('.error-icon').show();
-		$element.closest('.input').find('.error-message').css('display', 'block');
-	}
-
-	$element = $('input[name=birth_place]');
-	const birth_place = $element.val().trim();
-	if (birth_place === '') {
-		isError = true;
-		$element.addClass('error');
-		$element.closest('.input').find('.error-icon').show();
-		$element.closest('.input').find('.error-message').css('display', 'block');
+		$element.closest('.custom-select').find('.error-select').css('display', 'block');
 	}
 
 	$element = $('input[name=phone]');
@@ -221,31 +212,12 @@ $('#register-form').submit(function (event) {
 		$element.closest('.input').find('.error-message').css('display', 'block');
 	}
 
-	$element = $('input[name=address]');
-	const address = $element.val().trim();
-	if (address === '') {
+	$element = $('select[name=position]');
+	const position = $element.val().trim();
+	if (position === '') {
 		isError = true;
-		$element.addClass('error');
-		$element.closest('.input').find('.error-icon').show();
-		$element.closest('.input').find('.error-message').css('display', 'block');
-	}
-
-	$element = $('input[name=company]');
-	const company = $element.val().trim();
-	if (company === '') {
-		isError = true;
-		$element.addClass('error');
-		$element.closest('.input').find('.error-icon').show();
-		$element.closest('.input').find('.error-message').css('display', 'block');
-	}
-
-	$element = $('input[name=department]');
-	const department = $element.val().trim();
-	if (department === '') {
-		isError = true;
-		$element.addClass('error');
-		$element.closest('.input').find('.error-icon').show();
-		$element.closest('.input').find('.error-message').css('display', 'block');
+		$element.closest('.custom-select').find('.select-selected').addClass('error');
+		$element.closest('.custom-select').find('.error-select').css('display', 'block');
 	}
 
 	$element = $('input[name=is_accept]');
@@ -268,32 +240,20 @@ $('#register-form').submit(function (event) {
 			email,
 			custom_questions: [
 				{
-					title: 'Giới tính',
-					value: gender,
+					title: 'Nơi công tác hiện tại',
+					value: company,
 				},
 				{
-					title: 'Ngày sinh (dd/mm/yyyy)',
-					value: birthday,
-				},
-				{
-					title: 'Nơi sinh',
-					value: birth_place,
+					title: 'Thành Phố/ Tỉnh',
+					value: city,
 				},
 				{
 					title: 'Số điện thoại',
 					value: phone,
 				},
 				{
-					title: 'Địa chỉ liên hệ',
-					value: address,
-				},
-				{
-					title: 'Đơn vị công tác',
-					value: company,
-				},
-				{
-					title: 'Chuyên khoa công tác',
-					value: department,
+					title: 'Vui lòng xác nhận anh/chị là',
+					value: position,
 				},
 			],
 		}),

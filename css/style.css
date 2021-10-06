@@ -759,6 +759,10 @@ input[type='search']::-webkit-search-results-decoration {
 	display: none;
 }
 
+.error-select {
+	margin-top: 62px;
+}
+
 .register .form .input .error-message.show {
 	display: block;
 }
