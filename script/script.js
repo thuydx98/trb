@@ -234,6 +234,7 @@ $('#register-form').submit(function (event) {
 		url: 'https://id.azurewebsites.net/api/webinars/83310241529/registrants',
 		type: 'post',
 		dataType: 'json',
+		crossDomain: true,
 		contentType: "application/json; charset=utf-8",
 		headers: { "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() },
 		data: JSON.stringify({
@@ -246,7 +247,7 @@ $('#register-form').submit(function (event) {
 					value: company,
 				},
 				{
-					title: 'Thành Phố/ Tỉnh',
+					title: 'Tỉnh/ Thành phố',
 					value: city,
 				},
 				{
