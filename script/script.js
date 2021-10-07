@@ -233,7 +233,9 @@ $('#register-form').submit(function (event) {
 	request = $.ajax({
 		url: 'https://id.azurewebsites.net/api/webinars/83310241529/registrants',
 		type: 'post',
-		headers: { 'Content-Type': 'application/json' },
+		dataType: 'json',
+		contentType: "application/json; charset=utf-8",
+		headers: { "RequestVerificationToken": $('input[name="__RequestVerificationToken"]').val() },
 		data: JSON.stringify({
 			first_name,
 			last_name,

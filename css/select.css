@@ -80,6 +80,8 @@
 	border-radius: 15px;
 	overflow: hidden;
 	z-index: 3;
+	max-height: 270px;
+    overflow-y: auto;
 }
 
 /*hide the items when the select box is closed:*/
